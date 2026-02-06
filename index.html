@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scalable Exam UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="exam-shell">
+
+        <!-- LEFT -->
+        <div class="timeline">
+            <!-- Scales to 100+ -->
+           
+        </div>
+
+        <!-- CENTER -->
+        <div class="stage">
+            <div class="stage-content">
+                <h1 class="question">
+                    <ul class="questions"></ul>
+                </h1>
+
+                <div class="answers">
+                    <ul class="options"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="control-panel">
+            <div class="timer-wrapper">
+                <svg class="progress-ring" width="180" height="180">
+                    <circle class="progress-ring-bg" cx="90" cy="90" r="80" />
+                    <circle class="progress-ring-circle" cx="90" cy="90" r="80" />
+                </svg>
+
+                <div class="timer-text">00:00</div>
+            </div>
+
+
+            <div class="controls">
+                <button class="prev">Previous</button>
+                <button class="next">Next</button>
+                <button class="submit">Submit Exam</button>
+            </div>
+        </div>
+    </div>
+    <div class="submitted">
+        <h2 style="display: none;">Congratulations. You have completed your exam!!</h2>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

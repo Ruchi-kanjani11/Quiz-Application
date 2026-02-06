@@ -1,0 +1,213 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(120deg, #020617, #0f172a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        /* MAIN CONTAINER */
+        .exam-shell {
+            width: 95%;
+            max-width: 1300px;
+            height: 90vh;
+            display: grid;
+            grid-template-columns: 90px 1fr 340px;
+            gap: 22px;
+        }
+
+        /* LEFT – QUESTION NAV */
+        .timeline {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 30px;
+            padding: 18px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            overflow-y: auto;
+            backdrop-filter: blur(16px);
+        }
+
+        .step {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .step.active {
+            background: linear-gradient(135deg, #22d3ee, #6366f1);
+            box-shadow: 0 0 16px rgba(99, 102, 241, 0.8);
+        }
+
+        /* CENTER – QUESTION STAGE */
+        .stage {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 36px;
+            padding: 34px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            backdrop-filter: blur(18px);
+        }
+
+        /* Scrollable content */
+        .stage-content {
+            overflow-y: auto;
+            padding-right: 8px;
+        }
+
+        /* Question */
+        .stage h1 {
+            font-size: 24px;
+            margin-bottom: 28px;
+            line-height: 1.4;
+            max-width: 85%;
+        }
+
+        /* Answers */
+        .answers {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .answer {
+            padding: 22px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .answer:hover {
+            background: linear-gradient(135deg, #6366f1, #22d3ee);
+            transform: translateY(-4px);
+        }
+
+        /* RIGHT – CONTROL PANEL */
+        .control-panel {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 36px;
+            padding: 26px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            backdrop-filter: blur(16px);
+        }
+
+        .timer-wrapper {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+
+        .progress-ring-bg {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.12);
+            stroke-width: 10;
+        }
+
+        .progress-ring-circle {
+            fill: none;
+            stroke: #22d3ee;
+            stroke-width: 10;
+            stroke-linecap: round;
+            stroke-dasharray: 502;
+            stroke-dashoffset: 0;
+            transition: stroke-dashoffset 0.3s linear;
+        }
+
+        .timer-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 28px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+
+        /* BUTTONS – STICKY */
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            position: sticky;
+            bottom: 0;
+        }
+
+        button {
+            padding: 14px;
+            border: none;
+            border-radius: 16px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .prev {
+            background: #1e293b;
+            color: #fff;
+        }
+
+        .next {
+            background: #6366f1;
+            color: #fff;
+        }
+
+        .submit {
+            background: #22c55e;
+            color: #fff;
+        }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .submitted h2 {
+            padding: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+
+        .answer {
+            margin-bottom: 16px;
+        }
+
+        .answer.selected {
+            background: linear-gradient(135deg, #22d3ee, #6366f1);
+            color: #fff;
+
+        }
